@@ -1,0 +1,130 @@
+:root{
+    --primaryFont:"Montserrat", serif;
+    --secFont:"Fraunces", serif;
+--DarkCyan: hsl(158, 36%, 37%);
+--creamColor: hsl(30, 38%, 92%);
+--VeryDarkBlue: hsl(212, 21%, 14%);
+--DarkGrayishBlue: hsl(228, 12%, 48%);
+--WhiteColor: hsl(0, 0%, 100%);
+}
+*,*::after,*::before{
+    margin: 0;
+    padding:0 ;
+    list-style: none;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+}
+body{
+    font-family: var(--primaryFont);
+    font-weight: 700px;
+    font-size:14px ;
+    background-color: var(--creamColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.card{
+    width: 600px;
+    display: flex;
+}
+h3,h2,h4,h6{
+    font-weight: 700px;
+    font-family: var(--secFont);
+    margin-bottom:15px ;
+}
+p{
+    font-weight: 300px;
+    font-family:var(--primaryFont);
+    margin-bottom: 15px;
+}
+.card_img{
+    flex-basis: 50%;
+}
+.card_img img.dextop{
+    border-radius: 10px 0px 0px 10px;
+}
+.card_img img.mobile{
+border-radius: 10px 10px 0 0;
+display: none;
+}
+.card_body{
+    flex-basis: 50%;
+    height: auto;
+    background: var(--WhiteColor);
+border-radius:0 10px 10px 0px;
+padding: 30px;
+position: relative;
+
+}
+.card_body h4{
+    font-size: 32px;
+    color: var(--VeryDarkBlue);
+
+}
+.card_body h6{
+    color: var(--DarkGrayishBlue);
+    font-family: var(--secFont);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500px;
+    font-size: 14px;
+}
+.card_body p{
+    color: var(--DarkGrayishBlue);
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+.card_body p.price{
+    color: var(--DarkCyan);
+    font-family: var(--secFont);
+    font-size: 32px;
+    font-weight: 700px;
+}
+.card_body p.price span{
+    font-family: var(--primaryFont);
+    font-size: 14px;
+    color: var(--VeryDarkBlue);
+    text-decoration:line-through;
+    padding-left: 10px;
+    position: relative;
+    top: -5px;
+}
+.card_body button{
+    background: var(--DarkCyan);
+    width: 100%;
+    border: 0px;
+    padding: 15px 0;
+    border-radius: 10px;
+    color: var(--WhiteColor);
+    font-family: var(--primaryFont);
+    font-weight: 700;
+}
+
+
+@media only screen and (max-width:800px){
+    body{
+        align-items:flex-start;
+    }
+    .card{
+        width: 90%;
+        height: auto;
+        flex-direction:column;
+    }
+    .card_img{
+        margin-top: 26px;
+    }
+    .card_img img.dextop{
+        border-radius: 10px 0px 0px 10px;
+        display: none;
+    }
+    .card_img img.mobile{
+    border-radius: 10px 10px 0px 0px;
+    display:block;
+    }
+}
